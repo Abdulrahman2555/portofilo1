@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youssef Mohamed | Accountant </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* === Global Variables === */
+        :root {
+            --bg-color: #050510;
+            --card-bg: #101020;
+            --primary-color: #00d2ff;
+            --secondary-color: #3a86ff;
+            --text-color: #e0e0e0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #fff;
+            font-weight: 700;
+        }
+
+        p {
+            line-height: 1.7;
+            color: #d0d0d0;
+        }
+
+        .text-muted {
+            color: #b0b0b0 !important;
+        }
+
+        /* === Custom Navbar Styling === */
+        .navbar {
+            background-color: rgba(5, 5, 16, 0.85);
+            backdrop-filter: blur(15px);
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(58, 134, 255, 0.05);
+            transition: 0.3s;
+        }
+
+        .navbar-brand img {
+            height: 55px;
+            transition: 0.3s;
+            object-fit: contain;
+        }
+
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+
+        .nav-center-bar {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 50px;
+            padding: 4px 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px auto;
+        }
+
+        .nav-link {
+            color: #e0e0e0 !important;
+            margin: 0 2px;
+            transition: 0.3s;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 6px 12px !important;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #fff !important;
+            background: rgba(0, 210, 255, 0.15);
+            text-shadow: 0 0 5px rgba(0, 210, 255, 0.5);
+        }
+
+        .nav-btn-contact {
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            color: #fff !important;
+            padding: 8px 20px !important;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
+            transition: 0.3s;
+            font-size: 0.85rem;
+            text-transform: none;
+            white-space: nowrap;
+        }
+
+        .nav-btn-contact:hover {
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
+            transform: translateY(-2px);
+            color: #fff !important;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        @media (min-width: 992px) {
+            .nav-center-bar {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                margin: 0;
+            }
+        }
+
+        /* === Hero Section === */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+        }
+
+        .hero-name {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+
+        .hero-role {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: #d0d0d0;
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+
+        /* Buttons */
+        .btn-glow {
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            border: none;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-glow:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 210, 255, 0.5);
+            color: #fff;
+        }
+
+        .btn-outline-glow {
+            background: transparent;
+            border: 2px solid var(--secondary-color);
+            color: #fff;
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-left: 10px;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-outline-glow:hover {
+            background: rgba(58, 134, 255, 0.1);
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        /* Logo Buttons for Education & Experience */
+        .logo-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(0, 210, 255, 0.4);
+            transition: 0.3s;
+            overflow: hidden;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .logo-btn:hover {
+            transform: scale(1.1);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+        }
+
+        .logo-btn.logo-static {
+            cursor: default;
+            margin-left: 15px;
+        }
+
+        .logo-btn.logo-static:hover {
+            transform: none;
+            border-color: rgba(0, 210, 255, 0.4);
+            box-shadow: none;
+        }
+
+        .logo-btn img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 5px;
+        }
+
+        /* Blob & Image */
+        .hero-img-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .blob-bg {
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background: linear-gradient(45deg, rgba(58, 134, 255, 0.2), rgba(0, 210, 255, 0.1));
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            animation: blob-bounce 5s infinite ease-in-out;
+            z-index: -1;
+            filter: blur(40px);
+        }
+
+        .profile-img {
+            width: 380px;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid rgba(0, 210, 255, 0.5);
+            box-shadow: 0 0 30px rgba(0, 210, 255, 0.2);
+        }
+
+        @keyframes blob-bounce {
+
+            0%,
+            100% {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            }
+
+            50% {
+                border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+            }
+        }
+
+        /* === Section Styles === */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* === Reveal Animation === */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* === Scroll To Top Button === */
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            border: none;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #scrollTopBtn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 210, 255, 0.6);
+        }
+
+        /* === Cards Common Style === */
+        .common-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            transition: 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            height: 100%;
+        }
+
+        .common-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0, 210, 255, 0.1);
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 20px;
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* === Timeline === */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -39px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            background: var(--bg-color);
+            border: 4px solid var(--primary-color);
+            border-radius: 50%;
+        }
+
+        .date-badge {
+            background: rgba(58, 134, 255, 0.15);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 10px;
+            border: 1px solid rgba(58, 134, 255, 0.3);
+        }
+
+        .car-text strong {
+            color: var(--primary-color);
+        }
+
+        .car-text {
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        /* === Skills === */
+        .skill-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.3s;
+            height: 100%;
+            justify-content: center;
+        }
+
+        .skill-box:hover {
+            border-color: var(--secondary-color);
+            transform: scale(1.05);
+        }
+
+        .skill-icon-img {
+            width: 45px;
+            height: 45px;
+            margin-bottom: 15px;
+            object-fit: contain;
+        }
+
+        /* =========================================
+           حل مشكلة الفاصل (Divider) نهائياً باستخدام Border رفيع
+           =========================================
+        */
+        @media (min-width: 768px) {
+            .thin-divider-right {
+                border-right: 1px solid rgba(0, 210, 255, 0.2);
+                /* خط رفيع 1px فقط */
+            }
+        }
+
+        @media (max-width: 767px) {
+            .thin-divider-bottom {
+                border-bottom: 1px solid rgba(0, 210, 255, 0.2);
+                /* خط رفيع 1px للموبايل */
+                padding-bottom: 40px;
+                margin-bottom: 40px !important;
+            }
+        }
+
+        .tool-box {
+            padding: 15px 10px;
+        }
+
+        .service-list li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+
+        .service-list li i {
+            color: var(--primary-color);
+            margin-right: 8px;
+            font-size: 0.7rem;
+        }
+
+        .project-img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+            background: #222;
+        }
+
+        .tech-badge {
+            font-size: 0.75rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 10px;
+            border-radius: 5px;
+            margin-right: 5px;
+            color: #e0e0e0;
+            display: inline-block;
+        }
+
+        /* =========================================
+           Infinite Marquee For Testimonials
+           =========================================
+        */
+        .marquee-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 20px 0;
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 30px;
+            width: max-content;
+            animation: marquee-scroll 25s linear infinite;
+        }
+
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        .marquee-group {
+            display: flex;
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            width: 400px;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: 0.3s;
+            flex-shrink: 0;
+        }
+
+        .testimonial-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0, 210, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        @keyframes marquee-scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-50% - 15px));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonial-card {
+                width: 320px;
+                padding: 20px;
+            }
+        }
+
+        .testimonial-author-box {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+        }
+
+        .author-initial {
+            width: 45px;
+            height: 45px;
+            background: rgba(58, 134, 255, 0.2);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .social-circle-small {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
+            flex-shrink: 0;
+        }
+
+        .social-circle-small:hover {
+            background: var(--primary-color);
+            color: #000;
+        }
+
+        /* === Achievements & Services Icons === */
+        .achievement-card {
+            text-align: center;
+            padding: 30px;
+            background: rgba(58, 134, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(58, 134, 255, 0.2);
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .achievement-card:hover {
+            background: rgba(58, 134, 255, 0.1);
+        }
+
+        .achievement-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* كلاس جديد للصور الـ SVG عشان تاخد نفس مساحة الأيقونات */
+        .achievement-icon-img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 15px;
+            object-fit: contain;
+        }
+
+        /* === Contact Form === */
+        .contact-form input,
+        .contact-form textarea {
+            background: #16162a;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #a0a0b0;
+            opacity: 1;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            background: #16162a;
+            border-color: var(--primary-color);
+            box-shadow: none;
+            color: #fff;
+        }
+
+        .social-circle {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.2rem;
+            transition: 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        .social-circle:hover {
+            background: var(--primary-color);
+            color: #000;
+            border-color: var(--primary-color);
+        }
+
+        /* === Fancy Footer === */
+        .fancy-footer {
+            background-color: #020205;
+            padding-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-logo img {
+            max-width: 250px;
+            height: auto;
+            transition: 0.3s;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo:hover img {
+            transform: scale(1.05);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            background-color: #000;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-top: 1px solid #111;
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: var(--bg-color);
+                padding: 20px;
+                margin-top: 10px;
+                border-radius: 15px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-center-bar {
+                flex-direction: column;
+                background: transparent;
+                border: none;
+                width: 100%;
+                border-radius: 0;
+                padding: 0;
+            }
+
+            .nav-link {
+                margin-bottom: 10px;
+                width: 100%;
+                text-align: center;
+                white-space: normal;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 100px;
+            }
+
+            .hero-img-container {
+                margin-bottom: 30px;
+            }
+
+            .hero-name {
+                font-size: 2.5rem;
+            }
+
+            .blob-bg {
+                width: 300px;
+                height: 300px;
+            }
+
+            .profile-img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="scrollTopBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid px-lg-5">
+            <a class="navbar-brand" href="#">
+                <img src="assets/ym_logo.svg" alt="Youssef Mohamed Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="fas fa-bars text-white fs-3"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav nav-center-bar">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="#services">Services</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li> -->
+                </ul>
+                <a href="#contact"
+                    class="nav-btn-contact text-center text-decoration-none mt-3 mt-lg-0 d-inline-block">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero container reveal">
+        <div class="row align-items-center w-100">
+            <div class="col-lg-6">
+                <p class="mb-2 text-uppercase letter-spacing-2" style="color: var(--secondary-color);">Hello, I'm</p>
+                <h1 class="hero-name">Youssef Mohamed</h1>
+                <h2 class="hero-role">Accountant</h2>
+                <p class="hero-desc">Delivering precise financial insights and professional accounting expertise.
+                </p>
+                <div class="d-flex flex-wrap gap-2 mb-4 justify-content-md-start justify-content-center">
+                    <a href="#projects" class="btn btn-glow">View My Work</a>
+                    <a href="AbdulrahmanElgamal_CV1.pdf" download class="btn btn-outline-glow"><i
+                            class="fas fa-download me-2"></i>Download CV</a>
+                </div>
+            </div>
+            <div class="col-lg-6 hero-img-container">
+                <div class="blob-bg"></div>
+                <img src="assets/WhatsApp Image 2026-05-16 at 7.38.57 PM.jpeg" alt="Youssef Mohamed"
+                    class="profile-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container section-padding reveal">
+        <h2 class="section-title">About Me</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="about-text">
+                    <p class="mb-3">
+
+                        I'm a professional Accountant dedicated to delivering accurate financial
+                        reporting and data-driven insights that support smart business decisions.
+                        Hi, I'm a professional Accountant dedicated to delivering accurate financial reporting and
+                        data-driven insights that support smart business decisions. With hands-on experience in
+                        accounting and financial analysis, I've successfully managed multiple financial projects,
+                        including full-cycle bookkeeping and financial statement preparation. I achieved significant
+                        improvements in financial accuracy and reporting efficiency through meticulous attention to
+                        detail and advanced accounting techniques, ensuring reliable and compliant performance across
+                        diverse business environments.
+
+                        <!-- I bring proactive financial problem-solving to the table — anticipating your business's
+                        accounting needs and delivering solutions before issues even arise. My expertise includes
+                        financial reporting, tax preparation, auditing, budgeting, and the use of tools like Excel,
+                        QuickBooks, and SAP to deliver robust, professional accounting solutions. -->
+
+                    </p>
+                    <p class="mb-0">
+                        <!-- I bring proactive problem-solving to the table — anticipating your product's AI needs and
+                        engineering solutions before bottlenecks even arise. My tech stack includes Python, TensorFlow,
+                        PyTorch, LLMs, and advanced NLP & Computer Vision techniques to deliver robust, production-ready
+                        AI solutions. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="container section-padding pt-0 reveal">
+        <h2 class="section-title">Education & Certificates</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="common-card">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-primary mb-0"><i class="fas fa-graduation-cap me-2"></i>Education</h4>
+                        <span class="text-muted small">2023 - 2027</span>
+                    </div>
+                    <hr style="border-color: rgba(255,255,255,0.1);">
+
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <div>
+                            <h5 class="mb-2 text-white">Bachelor of Commerce</h5>
+                            <p class="text-info small mb-3"><i class="fas fa-university me-2"></i>Ain Shams University
+                            </p>
+                        </div>
+                        <div class="logo-btn logo-static" title="Ain Shams University">
+                            <img src="assets/Ain_Shams_logo.png" alt="SHA Logo">
+                        </div>
+                    </div>
+
+                    <p class="text-secondary small mb-2"><strong>Specialization:</strong> Accounting</p>
+                    <!-- <p class="text-secondary small mb-2"><strong>Coursework:</strong> Algorithms, Software Engineering, -->
+                    <!-- Data Structures, OOP.</p> -->
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="common-card">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-primary mb-0">
+                            <i class="fas fa-certificate me-2"></i>Certificates
+                        </h4>
+                        <span class="text-muted small">21 Sep 2025 - 25 Sep 2025</span>
+                    </div>
+                    <hr style="border-color: rgba(255,255,255,0.1);">
+
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h5 class="mb-0 text-white">Summer Training Program</h5>
+                        <a href="https://shla.edu.eg/" target="_blank" class="logo-btn" title="Ain Shams University">
+                            <img src="assets/WhatsApp Image 2026-05-17 at 2.01.18 AM (1).jpeg" alt="SHA Logo">
+                        </a>
+                    </div>
+
+                    <p class="text-info small mb-3">
+                        <i class="fas fa-building me-2"></i>Commercial International Bank (CIB) — Egypt
+                    </p>
+                    <p class="text-secondary small mb-1">
+                        <strong>Holder:</strong> Youssef Mohamed Sayed Fahmy
+                    </p>
+                    <p class="text-secondary small mb-1">
+                        <strong>Issued by:</strong> Mohamed El-Senary — Chief Human Resources Officer
+                    </p>
+                    <ul class="list-unstyled text-secondary small mt-2">
+                        <li><i class="fas fa-check text-success me-2"></i>Banking & Finance Fundamentals</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Professional Work Environment</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Certificate of Attendance — CIB</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- <div class="col-md-6 mb-4">
+                <div class="common-card">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-primary mb-0"><i class="fas fa-certificate me-2"></i>Certificates</h4>
+                        <span class="text-muted small">1 July 2025 - 28 July 2025</span>
+                    </div>
+                    <hr style="border-color: rgba(255,255,255,0.1);"> -->
+
+            <!-- <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h5 class="mb-0 text-white">Mobile using Flutter (120 hrs)</h5>
+                        <a href="https://www.linkedin.com/in/hisham-nasser-dev/" target="_blank"
+                            class="social-circle-small border border-secondary text-primary"
+                            style="width: 30px; height: 30px; font-size: 0.9rem;" title="View on LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div> -->
+
+            <!-- <p class="text-info small mb-3"><i class="fas fa-building me-2"></i>Information Technology Institute (ITI)</p>
+                    <p class="text-secondary small mb-1"><strong>Evaluation:</strong> 99%</p>
+                    <ul class="list-unstyled text-secondary small mt-2">
+                        <li><i class="fas fa-check text-success me-2"></i> HTML5, CSS3 & Intro to Prog</li>
+                        <li><i class="fas fa-check text-success me-2"></i> Dart & Flutter Framework</li>
+                        <li><i class="fas fa-check text-success me-2"></i> Firebase Integration</li> -->
+            <!-- </ul>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- <section id="skills" class="container section-padding reveal">
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="row position-relative">
+            <div class="col-md-6 mb-4 pe-md-5 thin-divider-right thin-divider-bottom">
+                <h4 class="mb-4 text-center text-info"><i class="fas fa-brain me-2"></i>AI & Machine Learning</h4>
+                <div class="row g-3">
+                    <div class="col-6 col-lg-4">
+                        <div class="skill-box">
+                            <img src="assets/icons/python.svg" alt="Python" class="skill-icon-img">
+                            <span class="skill-name">Python</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="skill-box">
+                            <img src="assets/icons/tensorflow.svg" alt="TensorFlow" class="skill-icon-img">
+                            <span class="skill-name">TensorFlow</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="skill-box">
+                            <img src="assets/icons/pytorch.svg" alt="PyTorch" class="skill-icon-img">
+                            <span class="skill-name">PyTorch</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="skill-box">
+                            <img src="assets/icons/scikitlearn.svg" alt="Scikit-learn" class="skill-icon-img">
+                            <span class="skill-name">Scikit-learn</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="skill-box">
+                            <img src="assets/icons/huggingface.svg" alt="Hugging Face" class="skill-icon-img">
+                            <span class="skill-name">Hugging Face</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="skill-box">
+                            <img src="assets/icons/opencv.svg" alt="OpenCV" class="skill-icon-img">
+                            <span class="skill-name">OpenCV</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4 ps-md-5">
+                <h4 class="mb-4 text-center text-success"><i class="fas fa-users me-2"></i>Soft Skills</h4>
+                <div class="row g-3">
+                    <div class="col-6 col-lg-4">
+                        <div class="skill-box"><img src="assets/icons/problemsolving.svg" alt="Problem Solving"
+                                class="skill-icon-img"><span class="skill-name">Problem Solving</span></div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="skill-box"><img src="assets/icons/leadership.svg" alt="Leadership"
+                                class="skill-icon-img"><span class="skill-name">Leadership</span></div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="skill-box"><img src="assets/icons/learning.svg" alt="Self-Learning"
+                                class="skill-icon-img"><span class="skill-name">Self-Learning</span></div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="skill-box"><img src="assets/icons/teamwork.svg" alt="Teamwork"
+                                class="skill-icon-img"><span class="skill-name">Teamwork</span></div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="skill-box"><img src="assets/icons/time-management.svg" alt="Time Mgmt"
+                                class="skill-icon-img"><span class="skill-name">Time Management</span></div>
+                    </div>
+                    <div class="col-6 col-lg-4">
+                        <div class="skill-box"><img src="assets/icons/presentation.svg" alt="Presentation"
+                                class="skill-icon-img"><span class="skill-name">Presentation</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4 justify-content-center">
+            <div class="col-lg-10">
+                <h4 class="mb-4 text-center text-primary"><i class="fas fa-tools me-2"></i>Tools I Use</h4>
+                <div class="row g-2 justify-content-center">
+                    <div class="col-4 col-md-2">
+                        <div class="skill-box tool-box">
+                            <img src="assets/icons/vscode.svg" alt="VS Code" class="skill-icon-img"
+                                style="width: 30px; height: 30px; margin-bottom: 10px;">
+                            <span class="skill-name small">VS Code</span>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <div class="skill-box tool-box">
+                            <img src="assets/icons/microsoft-visual-studio.svg" alt="Visual Studio"
+                                class="skill-icon-img" style="width: 30px; height: 30px; margin-bottom: 10px;">
+                            <span class="skill-name small">Visual Studio</span>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <div class="skill-box tool-box">
+                            <img src="assets/icons/Android Studio.svg" alt="Android Studio" class="skill-icon-img"
+                                style="width: 30px; height: 30px; margin-bottom: 10px;">
+                            <span class="skill-name small">Android Studio</span>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <div class="skill-box tool-box">
+                            <img src="assets/icons/figma.svg" alt="Figma" class="skill-icon-img"
+                                style="width: 30px; height: 30px; margin-bottom: 10px;">
+                            <span class="skill-name small">Figma</span>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <div class="skill-box tool-box">
+                            <img src="assets/icons/Git.svg" alt="Git" class="skill-icon-img"
+                                style="width: 30px; height: 30px; margin-bottom: 10px;">
+                            <span class="skill-name small">Git</span>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-2">
+                        <div class="skill-box tool-box">
+                            <img src="assets/icons/ssms.svg" alt="SSMS" class="skill-icon-img"
+                                style="width: 30px; height: 30px; margin-bottom: 10px;">
+                            <span class="skill-name small">SSMS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 justify-content-center">
+            <div class="col-lg-8">
+                <h4 class="mb-4 text-center text-secondary"><i class="fas fa-language me-2"></i>Languages</h4>
+                <div class="row g-3 justify-content-center">
+                    <div class="col-md-5">
+                        <div class="skill-box flex-row justify-content-center gap-3">
+                            <i class="fas fa-star text-warning" style="font-size: 1.5rem;"></i>
+                            <div class="text-start">
+                                <h5 class="mb-0">Arabic</h5>
+                                <small class="text-muted">Native</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="skill-box flex-row justify-content-center gap-3">
+                            <i class="fas fa-check-circle text-primary" style="font-size: 1.5rem;"></i>
+                            <div class="text-start">
+                                <h5 class="mb-0">English</h5>
+                                <small class="text-muted">Good</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <section id="experience" class="container section-padding reveal">
+        <h2 class="section-title">Experience</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content common-card">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <span class="date-badge">Nov 2025 - Aug 2026</span>
+                                    <h3 class="mb-1">Cross Platform App Development</h3>
+                                    <p class="text-info mb-4">Digital Egypt Pioneers Initiative (DEPI) - Hybrid</p>
+                                </div>
+                                <a href="https://depi.gov.eg/content/home" target="_blank" class="logo-btn ms-3"
+                                    title="DEPI">
+                                    <img src="assets/depi.png" alt="DEPI Logo">
+                                </a>
+                            </div>
+
+                            <p class="car-text text-secondary"><strong>Challenge:</strong> Mastering the full lifecycle
+                                of cross-platform mobile application development and advanced state management
+                                techniques.</p>
+                            <p class="car-text text-secondary"><strong>Action:</strong> Undertook intensive hybrid
+                                training, diving deep into Dart, Flutter, API integration, and Firebase, while
+                                consistently documenting and unit testing code.</p>
+                            <p class="car-text text-secondary"><strong>Result:</strong> Successfully developed scalable
+                                mobile applications ready for deployment on both Android and iOS platforms.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content common-card">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <span class="date-badge">July 2025 - Aug 2025</span>
+                                    <h3 class="mb-1">Flutter Development Course</h3>
+                                    <p class="text-info mb-4">Information Technology Institute (ITI) - Online</p>
+                                </div>
+                                <a href="https://iti.gov.eg/home" target="_blank" class="logo-btn ms-3" title="ITI">
+                                    <img src="assets/iti.png" alt="ITI Logo">
+                                </a>
+                            </div>
+
+                            <p class="car-text text-secondary"><strong>Challenge:</strong> Quickly grasping mobile app
+                                development fundamentals and transitioning into a structured framework like Flutter.</p>
+                            <p class="car-text text-secondary"><strong>Action:</strong> Completed a rigorous 120-hour
+                                intensive summer training covering HTML/CSS, JS basics, Dart, and Flutter UI/UX
+                                components.</p>
+                            <p class="car-text text-secondary"><strong>Result:</strong> Achieved a 99% final evaluation
+                                score and successfully built functional apps integrated with Firebase.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <section id="services" class="container section-padding reveal">
+        <h2 class="section-title">My Services</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="common-card text-start">
+                    <div class="text-center mb-4">
+                        <img src="assets/icons/app-development.svg" alt="App Development" class="achievement-icon-img">
+                        <h4>App Development</h4>
+                    </div>
+                    <p class="text-muted small mb-3">Building high-quality iOS and Android apps using a single Flutter
+                        codebase.</p>
+                    <ul class="list-unstyled service-list">
+                        <li><i class="fas fa-circle"></i> Flutter & Dart</li>
+                        <li><i class="fas fa-circle"></i> State Management</li>
+                        <li><i class="fas fa-circle"></i> Responsive UI/UX</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="common-card text-start">
+                    <div class="text-center mb-4">
+                        <img src="assets/icons/performance-growth.svg" alt="Performance Tuning"
+                            class="achievement-icon-img">
+                        <h4>Performance Tuning</h4>
+                    </div>
+                    <p class="text-muted small mb-3">Optimizing app performance to run smoothly on low-end devices.</p>
+                    <ul class="list-unstyled service-list">
+                        <li><i class="fas fa-circle"></i> Memory Optimization</li>
+                        <li><i class="fas fa-circle"></i> Code Refactoring</li>
+                        <li><i class="fas fa-circle"></i> Widget Tree Management</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="common-card text-start">
+                    <div class="text-center mb-4">
+                        <img src="assets/icons/backend.svg" alt="Backend Binding" class="achievement-icon-img">
+                        <h4>Backend Binding</h4>
+                    </div>
+                    <p class="text-muted small mb-3">Integrating apps with Firebase, REST APIs, and handling complex
+                        data flow.</p>
+                    <ul class="list-unstyled service-list">
+                        <li><i class="fas fa-circle"></i> Firebase Auth & Firestore</li>
+                        <li><i class="fas fa-circle"></i> RESTful API Integration</li>
+                        <li><i class="fas fa-circle"></i> Local Storage (SharedPrefs)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <section id="projects" class="container section-padding reveal">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="common-card p-0 overflow-hidden d-flex flex-column">
+                    <img src="assets/projectsImages/powergymAppMockup.png" alt="PowerGym" class="project-img">
+                    <div class="p-4 flex-grow-1 d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h4 class="mb-0">PowerGym</h4>
+                            <span class="badge bg-dark border border-secondary text-light" style="font-size:0.7rem;">Aug
+                                7 - Sep 17, 2025</span>
+                        </div>
+                        <p class="text-primary small mb-3">Freelance Project</p>
+
+                        <div class="mb-3 flex-grow-1">
+                            <p class="car-text text-secondary mb-1"><strong>Challenge:</strong> Creating a gym app that
+                                works smoothly on low-end devices.</p>
+                            <p class="car-text text-secondary mb-1"><strong>Action:</strong> Implemented clean
+                                architecture and optimized the widget tree.</p>
+                            <p class="car-text text-secondary mb-0"><strong>Result:</strong> Achieved a 30% performance
+                                boost and high client satisfaction.</p>
+                        </div>
+
+                        <div class="mt-auto">
+                            <div class="mb-3">
+                                <span class="tech-badge">Flutter</span> <span class="tech-badge">Dart</span> <span
+                                    class="tech-badge">SharedPrefs</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-light w-100"><i class="fab fa-github me-2"></i>View on
+                                GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="common-card p-0 overflow-hidden d-flex flex-column">
+                    <img src="assets/projectsImages/shozellAppMockuo.png" alt="Shozella" class="project-img">
+                    <div class="p-4 flex-grow-1 d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h4 class="mb-0">Shozella</h4>
+                            <span class="badge bg-dark border border-secondary text-light" style="font-size:0.7rem;">Jul
+                                25 - Jul 30, 2025</span>
+                        </div>
+                        <p class="text-primary small mb-3">ITI Summer Training</p>
+
+                        <div class="mb-3 flex-grow-1">
+                            <p class="car-text text-secondary mb-1"><strong>Challenge:</strong> Developing a full
+                                e-commerce flow in a very short timeframe.</p>
+                            <p class="car-text text-secondary mb-1"><strong>Action:</strong> Used Firebase for rapid
+                                backend deployment and integrated a mockup payment gateway.</p>
+                            <p class="car-text text-secondary mb-0"><strong>Result:</strong> Delivered a fully
+                                functional, real-time shopping application.</p>
+                        </div>
+
+                        <div class="mt-auto">
+                            <div class="mb-3">
+                                <span class="tech-badge">Flutter</span> <span class="tech-badge">Firebase</span> <span
+                                    class="tech-badge">API</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-light w-100"><i class="fab fa-github me-2"></i>View on
+                                GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="common-card p-0 overflow-hidden d-flex flex-column">
+                    <img src="assets/projectsImages/tokuAppMockup.png" alt="Toku" class="project-img">
+                    <div class="p-4 flex-grow-1 d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h4 class="mb-0">Toku App</h4>
+                            <span class="badge bg-dark border border-secondary text-light" style="font-size:0.7rem;">Jan
+                                12 - Jan 15, 2025</span>
+                        </div>
+
+                        <div class="mb-3 flex-grow-1">
+                            <p class="car-text text-secondary mb-1"><strong>Challenge:</strong> Building a language
+                                learning app that doesn't rely on internet connectivity.</p>
+                            <p class="car-text text-secondary mb-1"><strong>Action:</strong> Embedded local audio assets
+                                and structured data internally using Dart.</p>
+                            <p class="car-text text-secondary mb-0"><strong>Result:</strong> A seamless, instant-loading
+                                Japanese learning tool functioning 100% offline.</p>
+                        </div>
+
+                        <div class="mt-auto">
+                            <div class="mb-3">
+                                <span class="tech-badge">Flutter</span> <span class="tech-badge">Dart</span> <span
+                                    class="tech-badge">Offline</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-light w-100"><i class="fab fa-github me-2"></i>View on
+                                GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="container section-padding reveal">
+        <h2 class="section-title">Achievements</h2>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="achievement-card">
+                    <img src="assets/icons/selected.svg" alt="DEPI Selection" class="achievement-icon-img">
+                    <h4 class="mb-2">DEPI Selection</h4>
+                    <p class="text-primary small mb-3">Digital Egypt Pioneers Initiative</p>
+                    <p class="text-secondary small line-height-normal">Selected to join the prestigious MCIT initiative,
+                        undergoing intensive training in modern cross-platform development techniques.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="achievement-card">
+                    <i class="fab fa-github achievement-icon"></i>
+                    <h4 class="mb-2">3+ Active Projects</h4>
+                    <p class="text-primary small mb-3">GitHub Open Source</p>
+                    <p class="text-secondary small line-height-normal">Successfully developed and deployed robust,
+                        well-documented source codes available for review on my GitHub Profile.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="achievement-card">
+                    <img src="assets/icons/performance-growth.svg" alt="Performance Boost" class="achievement-icon-img">
+                    <h4 class="mb-2">30% Performance Boost</h4>
+                    <p class="text-primary small mb-3">Apkpure Platform</p>
+                    <p class="text-secondary small line-height-normal">Achieved massive performance optimization in the
+                        PowerGym App, successfully published and ensuring smooth usage on low-end devices.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- 
+    <section id="testimonials" class="container-fluid section-padding reveal overflow-hidden">
+        <h2 class="section-title">Testimonials</h2>
+
+        <div class="marquee-wrapper">
+            <div class="marquee-track">
+
+                <div class="marquee-group">
+                    <div class="testimonial-card">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="text-warning fs-5">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <span class="badge bg-dark border border-primary text-primary"><i
+                                        class="fas fa-bolt me-1"></i> Proactive</span>
+                            </div>
+                            <p class="fst-italic text-light">"Hisham exceeded my expectations with the PowerGym app. He
+                                implemented features I hadn't even thought of, and the app runs smoothly on all devices.
+                                A truly proactive developer!"</p>
+                        </div>
+                        <div class="testimonial-author-box mt-4 d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <div class="author-initial">SB</div>
+                                <div class="ms-3">
+                                    <h5 class="mb-0 text-white">Sayed Bukharist</h5>
+                                    <small class="text-muted">Gym Owner</small>
+                                </div>
+                            </div>
+                            <a href="https://www.facebook.com/sayed.bukharist.2025" target="_blank"
+                                class="social-circle-small text-primary border border-secondary">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="text-warning fs-5">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <span class="badge bg-dark border border-success text-success"><i
+                                        class="fas fa-check-circle me-1"></i> Excellent Student</span>
+                            </div>
+                            <p class="fst-italic text-light">"Hisham showed exceptional dedication during the Flutter
+                                course, achieving a 99% score. His grasp of complex concepts like State Management and
+                                clean architecture was highly impressive."</p>
+                        </div>
+                        <div class="testimonial-author-box mt-4 d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <div class="author-initial">MR</div>
+                                <div class="ms-3">
+                                    <h5 class="mb-0 text-white">Mostafa H. Ramadan</h5>
+                                    <small class="text-muted">ITI Flutter Instructor</small>
+                                </div>
+                            </div>
+                            <a href="https://www.linkedin.com/in/mostafa-hussain-ramadan/" target="_blank"
+                                class="social-circle-small text-info border border-secondary">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="text-warning fs-5">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <span class="badge bg-dark border border-info text-info"><i
+                                        class="fas fa-bullseye me-1"></i> Committed Learner</span>
+                            </div>
+                            <p class="fst-italic text-light">"I had the honor of training Hisham in soft skills as part
+                                of the Digital Egypt Pioneers initiative. During the training, he proved to be an
+                                ambitious, enthusiastic, and highly committed learner. I wish you all the best, Engineer
+                                Hisham."</p>
+                        </div>
+                        <div class="testimonial-author-box mt-4 d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <div class="author-initial">AE</div>
+                                <div class="ms-3">
+                                    <h5 class="mb-0 text-white">Amira Ellahlopy</h5>
+                                    <small class="text-muted">DEPI Soft Skills Trainer</small>
+                                </div>
+                            </div>
+                            <a href="https://www.linkedin.com/in/amira-ellahlopy-9a6998150/" target="_blank"
+                                class="social-circle-small text-info border border-secondary">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="marquee-group" aria-hidden="true">
+                    <div class="testimonial-card">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="text-warning fs-5">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <span class="badge bg-dark border border-primary text-primary"><i
+                                        class="fas fa-bolt me-1"></i> Proactive</span>
+                            </div>
+                            <p class="fst-italic text-light">"Hisham exceeded my expectations with the PowerGym app. He
+                                implemented features I hadn't even thought of, and the app runs smoothly on all devices.
+                                A truly proactive developer!"</p>
+                        </div>
+                        <div class="testimonial-author-box mt-4 d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <div class="author-initial">SB</div>
+                                <div class="ms-3">
+                                    <h5 class="mb-0 text-white">Sayed Bukharist</h5>
+                                    <small class="text-muted">Gym Owner</small>
+                                </div>
+                            </div>
+                            <a href="https://www.facebook.com/sayed.bukharist.2025" target="_blank"
+                                class="social-circle-small text-primary border border-secondary"><i
+                                    class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="text-warning fs-5">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <span class="badge bg-dark border border-success text-success"><i
+                                        class="fas fa-check-circle me-1"></i> Excellent Student</span>
+                            </div>
+                            <p class="fst-italic text-light">"Hisham showed exceptional dedication during the Flutter
+                                course, achieving a 99% score. His grasp of complex concepts like State Management and
+                                clean architecture was highly impressive."</p>
+                        </div>
+                        <div class="testimonial-author-box mt-4 d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <div class="author-initial">MR</div>
+                                <div class="ms-3">
+                                    <h5 class="mb-0 text-white">Mostafa H. Ramadan</h5>
+                                    <small class="text-muted">ITI Flutter Instructor</small>
+                                </div>
+                            </div>
+                            <a href="https://www.linkedin.com/in/mostafa-hussain-ramadan/" target="_blank"
+                                class="social-circle-small text-info border border-secondary"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="text-warning fs-5">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <span class="badge bg-dark border border-info text-info"><i
+                                        class="fas fa-bullseye me-1"></i> Committed Learner</span>
+                            </div>
+                            <p class="fst-italic text-light">"I had the honor of training Hisham in soft skills as part
+                                of the Digital Egypt Pioneers initiative. During the training, he proved to be an
+                                ambitious, enthusiastic, and highly committed learner. I wish you all the best, Engineer
+                                Hisham."</p>
+                        </div>
+                        <div class="testimonial-author-box mt-4 d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <div class="author-initial">AE</div>
+                                <div class="ms-3">
+                                    <h5 class="mb-0 text-white">Amira Ellahlopy</h5>
+                                    <small class="text-muted">DEPI Soft Skills Trainer</small>
+                                </div>
+                            </div>
+                            <a href="https://www.linkedin.com/in/amira-ellahlopy-9a6998150/" target="_blank"
+                                class="social-circle-small text-info border border-secondary"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section> -->
+
+    <section id="contact" class="container section-padding mb-5 reveal">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="row">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+                <h3 class="mb-4">Let's Talk About Your Project</h3>
+                <p class="text-secondary mb-5">
+                    Feel free to reach out for collaborations, freelance work, or just to say hi! I am always open to
+                    discussing new projects.
+                </p>
+
+                <div class="d-flex align-items-center mb-4">
+                    <a href="mailto:abdulrahmanelgaml89@gmail.com" class="social-circle text-primary border-primary">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <div class="ms-3">
+                        <h5 class="mb-0">Email Me</h5>
+                        <a href="youssefousha80@gmail.com"
+                            class="text-secondary text-decoration-none">youssefousha80@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center mb-5">
+                    <a href="https://wa.me/+201111938872" target="_blank"
+                        class="social-circle text-success border-success">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <div class="ms-3">
+                        <h5 class="mb-0">WhatsApp</h5>
+                        <a href="https://wa.me/+201111938872" target="_blank"
+                            class="text-secondary text-decoration-none">+20 1111938872</a>
+                    </div>
+                </div>
+
+                <!-- <h5 class="mb-3">Follow Me</h5> -->
+                <!-- <div class="d-flex"> -->
+                <!-- <a href="https://github.com/Abdulrahman2555" target="_blank" class="social-circle"><i -->
+                <!-- class="fab fa-github"></i></a> -->
+                <!-- <a href="https://www.linkedin.com/in/abdulrahman-elgamal-06153031a/" target="_blank" -->
+                <!-- class="social-circle"><i class="fab fa-linkedin-in"></i></a> -->
+                <!-- </div> -->
+            </div>
+
+            <div class="col-lg-7">
+                <form class="contact-form" action="mailto:youssefousha80@gmail.com" method="post" enctype="text/plain">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" rows="5" placeholder="Your Message"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-glow w-100 mt-3">Send Message <i
+                            class="fas fa-paper-plane ms-2"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="fancy-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <a href="#" class="footer-logo">
+                        <img src="assets/ym_logo.svg" alt="Youssef Mohamed Logo">
+                    </a>
+                    <!-- <p class="text-muted mt-3 pe-md-5">Building robust, high-performance AI-powered solutions with a -->
+                    <!-- focus on clean architecture, scalable pipelines, and seamless intelligent user experiences. -->
+
+                    <!-- </p> -->
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="text-white mb-3">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <!-- <li><a href="#projects">Projects</a></li> -->
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="text-white mb-3">Social</h5>
+                    <div class="d-flex gap-3 mt-3">
+                        <!-- <a href="https://github.com/Abdulrahman2555" target="_blank" -->
+                        <!-- class="social-circle-small border border-secondary text-light"><i -->
+                        <!-- class="fab fa-github"></i></a> -->
+                        <!-- <a href="https://www.linkedin.com/in/abdulrahman-elgamal-06153031a/" target="_blank"
+                            class="social-circle-small border border-secondary text-primary"><i
+                                class="fab fa-linkedin-in"></i></a> -->
+                        <a href="https://wa.me/+201111938872" target="_blank"
+                            class="social-circle-small border border-secondary text-success"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <div class="container">
+                <p class="small text-secondary mb-0">© 2026 Designed & Built by Youssef Mohamed. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // === Scroll Reveal Animation ===
+        window.addEventListener('scroll', reveal);
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var revealTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = 100;
+
+                if (revealTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add('active');
+                } else {
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+        reveal();
+
+        // === Scroll to Top Button & Active Nav Link ===
+        let mybutton = document.getElementById("scrollTopBtn");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                mybutton.style.display = "flex";
+            } else {
+                mybutton.style.display = "none";
+            }
+
+            // Active Link Highlight
+            let sections = document.querySelectorAll('section');
+            let navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+            sections.forEach(sec => {
+                let top = window.scrollY;
+                let offset = sec.offsetTop - 150;
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id');
+
+                if (top >= offset && top < offset + height) {
+                    navLinks.forEach(links => {
+                        links.classList.remove('active');
+                        document.querySelector('.navbar-nav .nav-link[href*=' + id + ']').classList.add('active');
+                    });
+                }
+            });
+        }
+
+        mybutton.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+
+</html>
